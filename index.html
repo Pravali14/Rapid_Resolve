@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Resolve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page">
+        <h1>Welcome to Rapid Resolve</h1>
+        <button onclick="goToNextPage()">Proceed</button>
+    </div>
+
+    <!-- Signup or Login Page -->
+    <div id="authPage" class="page hidden">
+        <h2>Select an Option</h2>
+        <button onclick="goToSignup()">Sign Up</button>
+        <button onclick="goToLogin()">Log In</button>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupPage" class="page hidden">
+        <h2>Sign Up</h2>
+        <form onsubmit="return false;">
+            <input type="text" placeholder="Username" required>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Organization Name" required>
+            <input type="email" placeholder="Business Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button onclick="goToRoleSelection()">Next</button>
+        </form>
+    </div>
+
+    <!-- Role Selection Page -->
+    <div id="rolePage" class="page hidden">
+        <h2>Select Your Role</h2>
+        <button>Team Leader</button>
+        <button>User</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginPage" class="page hidden">
+        <h2>Log In</h2>
+        <form onsubmit="return false;">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button>Log In</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
